@@ -1,0 +1,14 @@
+# Netlify redirects for Single Page Application
+# This ensures all routes are handled by index.html
+
+/*    /index.html   200
+
+# API routes (if you add backend functions later)
+/api/*  /.netlify/functions/:splat  200
+
+# Prevent access to sensitive files
+/server.js  /404.html  404
+/config/*   /404.html  404
+/models/*   /404.html  404
+/routes/*   /404.html  404
+/.env       /404.html  404

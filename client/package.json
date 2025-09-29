@@ -1,7 +1,10 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
+  "name": "musicdistronow-client",
+  "version": "1.0.0",
+  "description": "MusicDistroNow - Music Distribution Platform Client",
+  "private": false,
+  "main": "index.html",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -10,13 +13,33 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "react-router-dom": "^6.23.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "http-server": "^14.1.1",
+    "serve": "^14.2.1",
+    "live-server": "^1.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "node scripts/start-server.js development",
+    "serve:dev": "node scripts/start-server.js development",
+    "serve:prod": "node scripts/start-server.js production",
+    "serve:preview": "node scripts/start-server.js preview",
+    "dev": "npm run serve:dev",
+    "production": "npm run serve:prod",
+    "preview": "npm run serve:preview",
+    "server": "npm run serve",
+    "start:static": "npm run serve",
+    "start:dev": "npm run serve:dev",
+    "start:prod": "npm run serve:prod",
+    "localhost": "npm run serve:dev",
+    "deploy:local": "npm run build && npm run serve:prod",
+    "package": "node scripts/package-server.js portable",
+    "package:exe": "node scripts/package-server.js executable",
+    "install:deps": "npm install http-server serve live-server -g",
+    "setup": "npm install && npm run install:deps"
   },
   "eslintConfig": {
     "extends": [
