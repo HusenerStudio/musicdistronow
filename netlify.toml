@@ -49,7 +49,7 @@
     Cache-Control = "public, max-age=0, must-revalidate"
 
 # Functions directory (if needed for serverless functions)
-[build.functions]
+[functions]
   directory = "netlify/functions"
 
 # Dev server settings for local development
